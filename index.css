@@ -1,0 +1,41 @@
+body {
+
+background-color: cornsilk;
+
+
+}
+
+.content {
+
+width: 812px;
+background-color: white;
+padding: 1em;
+margin: auto;
+
+}
+
+img {
+
+width: 200px;
+display: inline-block;
+
+}
+
+.post {
+    display: inline-block;
+}
+
+button {
+
+background-color: white;
+padding: 0.5em;
+border: 3px solid bisque;
+
+}
+
+button:hover {
+
+background-color: bisque;
+border: 3px solid burlywood;
+
+}
