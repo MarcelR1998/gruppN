@@ -1,13 +1,14 @@
 body {
 
 background-color: cornsilk;
-
+background-image: url("planta.jpeg");
+background-size: cover;
 
 }
 
 .content {
 
-width: 812px;
+width: 928px;
 background-color: white;
 padding: 1em;
 margin: auto;
@@ -23,19 +24,37 @@ display: inline-block;
 
 .post {
     display: inline-block;
+    padding: 1em;
 }
 
-button {
+.add {
 
-background-color: white;
+background-color: #517f51;
+color: white;
+
 padding: 0.5em;
-border: 3px solid bisque;
+border: none;
+border-radius: 3em; 
+transition: 200ms;
+}
+
+.add:hover {
+
+background-color: #517f5185
+}
+
+.delete {
+
+background-color: rgb(235, 235, 235);
+color: black;
+
+padding: 0.5em;
+border: none;
+transition: 200ms;
 
 }
 
-button:hover {
+.delete:hover {
 
-background-color: bisque;
-border: 3px solid burlywood;
-
+background-color: rgba(235, 235, 235, 0.60);
 }

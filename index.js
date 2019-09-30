@@ -1,21 +1,29 @@
 
-let button = document.querySelector("#button");
+let button = document.querySelectorAll("button");
 let postList = [];
 let image = document.querySelectorAll("img");
 let title = document.querySelectorAll("p");
+let content = document.querySelector(".content");
 
-i = 0;
+button.forEach(function (buttons) {
+    buttons.addEventListener("click", function (e) {
 
-button.addEventListener("click", function () {
+        if (e.target.className == "add") {
 
-    let srcData = prompt("enter image link");
+            let srcData = prompt("enter image link");
 
-    let textData = prompt("enter text");
+            let textData = prompt("enter text");
 
-    if (srcData != null && textData != null) {
-        addPost(srcData, textData);
-        assignPic();
-    }
+            if (srcData != null && textData != null) {
+
+                addPost(srcData, textData);
+            }
+
+        } else if (e.target.className == "delete") {
+            alert("funkar!");
+            console.log("funkar");
+        }
+    });
 });
 
 function addPost(link, text) {
@@ -26,13 +34,25 @@ function addPost(link, text) {
     };
 
     postList.push(post);
+    let div = document.createElement("div");
+    div.classList.add("post");
+
+    div.innerHTML = `<img src="${link}"></img> <p>${text}</p> <button class="delete" >edit</button> <button class="delete" >delete</button>`;
+
+    content.appendChild(div);
 
 }
 
-function assignPic() {
+function editPost(n) {
 
-    for (i = 0; i < postList.length; i++) {
-        image[i].src = postList[i].source;
-        title[i].textContent = postList[i].description;
-    }
-};
+    let srcData = prompt("enter image link");
+
+    let textData = prompt("enter text");
+
+    let post = {
+        source: link,
+        description: text
+    };
+
+    postList[n] = post;
+}
