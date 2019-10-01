@@ -58,3 +58,36 @@ transition: 200ms;
 
 background-color: rgba(235, 235, 235, 0.60);
 }
+
+.submit {
+
+background-color: white;
+color: black;
+
+padding: 0.5em;
+border: none;
+transition: 200ms;
+
+}
+
+.submit:hover {
+
+background-color: rgba(255, 255, 255, 0.60);
+}
+
+.hidden {
+    display: none;
+}
+
+.textInput {
+padding: 0.5em;
+border: none;
+background-color:white;
+transition: 200ms; 
+}
+
+.textInput:hover {
+
+background-color: rgba(255, 255, 255, 0.60);
+
+}

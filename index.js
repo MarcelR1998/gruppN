@@ -5,26 +5,30 @@ let image = document.querySelectorAll("img");
 let title = document.querySelectorAll("p");
 let content = document.querySelector(".content");
 
-button.forEach(function (buttons) {
-    buttons.addEventListener("click", function (e) {
 
-        if (e.target.className == "add") {
+// button.forEach(function (buttons) {
+document.body.addEventListener("click", function (e) {
 
-            let srcData = prompt("enter image link");
+    if (e.target.classList.contains("add")) {
 
-            let textData = prompt("enter text");
+        document.forms[0].classList.toggle("hidden");
 
-            if (srcData != null && textData != null) {
+        /*let srcData = prompt("enter image link");
 
-                addPost(srcData, textData);
-            }
+        let textData = prompt("enter text");*/
 
-        } else if (e.target.className == "delete") {
-            alert("funkar!");
-            console.log("funkar");
+        if (srcData != null && textData != null) {
+
+            addPost(srcData, textData);
         }
-    });
+
+    } else if (e.target.classList.contains("delete")) {
+        alert("funkar!");
+        console.log("funkar");
+    }
+
 });
+// });
 
 function addPost(link, text) {
 
