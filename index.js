@@ -11,11 +11,11 @@ document.body.addEventListener("click", function (e) {
 
     if (e.target.classList.contains("add")) {
 
-        document.forms[0].classList.toggle("hidden");
+        /*document.forms[0].classList.toggle("hidden");*/
 
-        /*let srcData = prompt("enter image link");
+        let srcData = prompt("enter image link");
 
-        let textData = prompt("enter text");*/
+        let textData = prompt("enter text");
 
         if (srcData != null && textData != null) {
 
