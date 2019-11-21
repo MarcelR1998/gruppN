@@ -1,101 +1,130 @@
 body {
-
-background-color: cornsilk;
+background-color: cornflowerblue;
 background-image: url("planta.jpeg");
 background-size: cover;
+margin: 0;
+font-family: 'Roboto', sans-serif;
+}
 
+button {
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+nav {
+    background-color: white;
+    height: 52px;
+    width: auto;
+    box-shadow: 0 0 8px #00000041;
+}
+
+nav img {
+    position: absolute;
+    left: 3;
+    top: 3;
+    width: 190px;
 }
 
 .addingmodule {
-position: fixed;
-left: 10;
+position: absolute;
+left: 200;
 top: 10;
+}
+
+.addingmodule .form {
+    display: inline;
 }
 
 .content {
 
-width: 928px;
-background-color: white;
-padding: 1em;
-margin: auto;
-box-shadow: 0 0 8px #00000041;
+    width: 100%;
+    max-width: 928px;
+    height: auto;
+    background-color: white;
+    padding: 1em;
+    margin: auto;
+    box-shadow: 0 5px 8px #00000041;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 img {
 
-width: 200px;
-display: inline-block;
+    width: 200px;
+    display: inline-block;
 
 }
 
 .post {
     display: inline-block;
     padding: 1em;
+    outline: darkgreen;
 }
 
 .add {
 
-background-color: #517f51;
-color: white;
-
-padding: 0.5em;
-border: none;
-transition: 200ms;
-outline: none;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    padding: 0.5em;
+    border: 1px solid rgb(233, 233, 233);
+    transition: 200ms;
 }
 
 .add:hover {
 
-background-color: #517f5185
+    background-color: rgb(212, 212, 212);
+    color: black;
 }
 
 .delete {
 
-background-color: rgb(235, 235, 235);
-color: black;
-
-padding: 0.5em;
-border: none;
-transition: 200ms;
+    background-color: rgb(235, 235, 235);
+    color: black;
+    padding: 0.5em;
+    border: none;
+    transition: 200ms;
 
 }
 
 .delete:hover {
-
-background-color: rgba(235, 235, 235, 0.60);
+    background-color: rgba(235, 235, 235, 0.60);
 }
 
 .edit {
 
-background-color: rgb(235, 235, 235);
-color: black;
-
-padding: 0.5em;
-border: none;
-transition: 200ms;
+    background-color: rgb(235, 235, 235);
+    color: black;
+    padding: 0.5em;
+    border: none;
+    transition: 200ms;
 
 }
 
 .edit:hover {
-
-background-color: rgba(235, 235, 235, 0.60);
+    background-color: rgba(235, 235, 235, 0.60);
 }
 
 .submit {
 
-background-color: white;
+background-color: rgb(233, 233, 233);
 color: black;
-
 padding: 0.5em;
-border: none;
+border: 1px solid rgb(233, 233, 233);
 transition: 200ms;
-outline: none;
-
 }
 
 .submit:hover {
+background-color: rgb(212, 212, 212);
+}
 
-background-color: rgba(255, 255, 255, 0.60);
+.submit:focus {
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 .hidden {
@@ -103,21 +132,29 @@ background-color: rgba(255, 255, 255, 0.60);
 }
 
 .textInput {
-padding: 0.5em;
-border: none;
-background-color:white;
-transition: 200ms; 
-outline: none;
+    padding: 0.5em;
+    border: 1px solid rgb(189, 189, 189);
+    background-color:white;
+    transition: 200ms; 
 }
 
-.textInput:hover {
-
-background-color: rgba(255, 255, 255, 0.60);
-
+.textInput:focus {
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 .form {
-
 margin: 0.5em;
+}
+
+@media (max-width: 730px) {
+ 
+.textInput {
+display: block;
+}
+
+.submit {
+    border: 1px solid black;
+    width: 172.13px;
+}
 
 }
